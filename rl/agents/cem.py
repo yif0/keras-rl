@@ -44,7 +44,7 @@ class CEMAgent(Agent):
         self.num_weights = sum(self.sizes)
         
         # store the best result seen during training, as a tuple (reward, flat_weights)
-        self.best_seen = (None,np.zeros(self.num_weights))
+        self.best_seen = (np.zeros(self.num_weights))
 
         self.theta = np.zeros(self.num_weights*2)
         self.update_theta(theta_init)
